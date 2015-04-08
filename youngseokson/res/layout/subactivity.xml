@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+	    	    
+		
+
+		<Button
+		   android:id="@+id/Reg"
+		   android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_marginTop="150dp"
+      	   android:layout_marginLeft="20dp"
+	       android:text="저장" />
+
+		<Button
+		    android:id="@+id/cancel"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignBaseline="@+id/Reg"
+		    android:layout_alignBottom="@+id/Reg"
+		    android:layout_alignRight="@+id/dupCheck"
+		    android:layout_marginRight="32dp"
+		    android:text="back" />
+
+		<Button
+		    android:id="@+id/dupCheck"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignBottom="@+id/EditEmail"
+		    android:layout_alignParentRight="true"
+		    android:layout_alignParentTop="true"
+		    android:text="중복확인" />
+
+		<TextView
+		    android:id="@+id/LabelPwd1"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignLeft="@+id/Reg"
+		    android:layout_below="@+id/EditEmail"
+		    android:layout_marginTop="14dp"
+		    android:text="패스워드" />
+		
+		<TextView
+		    android:id="@+id/LabelEmail"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_above="@+id/LabelPwd"
+		    android:layout_alignLeft="@+id/LabelPwd1"
+		    android:text="이메일" />
+
+		<EditText
+		    android:id="@+id/EditPwd"
+		    android:layout_width="150dp"
+		    android:layout_height="wrap_content"
+		    android:layout_alignBottom="@+id/LabelPwd1"
+		    android:layout_centerHorizontal="true"
+		    android:inputType="textPassword"
+		    android:ems="10" />
+
+		<EditText
+		    android:id="@+id/EditEmail"
+		    android:layout_width="150dp"
+		    android:layout_height="wrap_content"
+		    android:layout_alignLeft="@+id/EditPwd"
+		    android:layout_alignParentTop="true"
+		    android:ems="10" />
+		<requestFocus />
+
+</RelativeLayout>
