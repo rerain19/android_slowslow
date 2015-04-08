@@ -233,7 +233,7 @@ public class SubActivity extends Activity{
 			// TODO Auto-generated method stub
 			//super.onPostExecute(result);
 			if(result == true){
-				Toast.makeText(SubActivity.this, "저장 되었습니다", Toast.LENGTH_LONG).show();
+				Toast.makeText(SubActivity.this, "저장 되었습니다, git 연동중입니다.", Toast.LENGTH_LONG).show();
 				registerGcm();
 			}else{
 				Toast.makeText(SubActivity.this, "저장 실패", Toast.LENGTH_LONG).show();
