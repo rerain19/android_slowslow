@@ -34,7 +34,11 @@
       <activity
 			android:name="com.rerain19.test.SubActivity"
 			android:label="@layout/subactivity"
-      />	
+      />
+      <activity
+			android:name="com.rerain19.test.loin_ok"
+			android:label="@layout/login_ok"
+      />
       <receiver
           android:name="com.google.android.gcm.GCMBroadcastReceiver"
           android:permission="com.google.android.c2dm.permission.SEND" >

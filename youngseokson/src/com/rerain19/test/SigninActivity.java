@@ -21,6 +21,7 @@ import org.apache.http.protocol.HTTP;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.view.Gravity;
@@ -139,6 +140,8 @@ public class SigninActivity  extends AsyncTask<String,Void,String>{
 		   toast.show();
 	   
 		   this.statusField.setText("로그인성공");
+		   Intent intent1 = new Intent(SubActivity.this);
+
 		   //this.roleField.setText(result);
 	   }else{
 		   
