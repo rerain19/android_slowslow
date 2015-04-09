@@ -47,7 +47,7 @@
 		    android:id="@+id/LabelEmail"
 		    android:layout_width="wrap_content"
 		    android:layout_height="wrap_content"
-		    android:layout_above="@+id/LabelPwd"
+		    android:layout_above="@+id/LabelPwd1"
 		    android:layout_alignLeft="@+id/LabelPwd1"
 		    android:text="이메일" />
 
