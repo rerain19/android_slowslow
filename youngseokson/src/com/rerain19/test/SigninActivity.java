@@ -140,7 +140,6 @@ public class SigninActivity  extends AsyncTask<String,Void,String>{
 		   toast.show();
 	   
 		   this.statusField.setText("로그인성공");
-		   Intent intent1 = new Intent(SubActivity.this);
 
 		   //this.roleField.setText(result);
 	   }else{
