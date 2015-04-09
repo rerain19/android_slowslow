@@ -63,47 +63,18 @@ public class MainActivity extends Activity {
 		String username = usernameField.getText().toString();
 		String password = passwordField.getText().toString();
 	
-		String result = null;
 		method.setText("get Method");
-		try{
-			result = new SigninActivity(this, status, role, 0).execute(username, password).get();
-			
-			if(result != null){	
-				pageMove(username, password);
-			}
-		}catch(Exception e){
-			Log.d("issue: ", e.getMessage());
-		}
-		
+		new SigninActivity(this, status, role, 0).execute(username, password);		
 	}
 	
 	public void loginPost(View view){
 		String username = usernameField.getText().toString();
 		String password = passwordField.getText().toString();
-		String result = null;
 		
 		method.setText("post Method");
 		new SigninActivity(this, status, role, 1).execute(username, password);
-		
-		try{
-			result = new SigninActivity(this, status, role, 1).execute(username, password).get();
-			if(result != null){		
-				pageMove(username, password);
-			}
-		}catch(Exception e){
-			Log.d("issue: ", e.getMessage());
-		}
 	}
 	
-	public void pageMove(String username, String password){
-		Intent login_ok = new Intent(this, login_ok.class);
-		startActivity(login_ok);
-		finish();
-		
-	 Toast toast = Toast.makeText(getApplicationContext(), "페이지이동", Toast.LENGTH_LONG);
-	   toast.setGravity(Gravity.CENTER, 0, 0);
-	   toast.show();
-	}
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle action bar item clicks here. The action bar will

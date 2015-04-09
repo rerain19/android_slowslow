@@ -144,12 +144,8 @@ public class SigninActivity  extends AsyncTask<String,Void,String>{
 		   this.statusField.setText("로그인성공");
 
 			Intent login_ok = new Intent(context, login_ok.class);
-			//startActivity(login_ok);
-			//finish();
 			context.startActivity(login_ok);
 			((Activity)context).finish();
-
-//		   context.startActivity(new Intent(context, login_ok.class));
 	   }else{
 		   
 		   Toast toast = Toast.makeText(context, "로그인실패", Toast.LENGTH_LONG);
