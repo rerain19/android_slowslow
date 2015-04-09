@@ -37,7 +37,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class SubActivity extends Activity{
+public class JoinProc extends Activity{
 	String email, pwd;
 	InputStream is = null;
 	
@@ -194,7 +194,7 @@ public class SubActivity extends Activity{
 	}
 	
 	private class InsertData extends AsyncTask<String, Void, Boolean>{
-		ProgressDialog dialog = new ProgressDialog(SubActivity.this);
+		ProgressDialog dialog = new ProgressDialog(JoinProc.this);
 		
 		@Override
 		protected void onPreExecute() {
@@ -221,7 +221,7 @@ public class SubActivity extends Activity{
 	
 					HttpResponse response = client.execute(post);
 				} catch(Exception e){
-					Toast.makeText(SubActivity.this, e.toString(), Toast.LENGTH_LONG).show();
+					Toast.makeText(JoinProc.this, e.toString(), Toast.LENGTH_LONG).show();
 					return false;
 				}
 			}
@@ -233,10 +233,10 @@ public class SubActivity extends Activity{
 			// TODO Auto-generated method stub
 			//super.onPostExecute(result);
 			if(result == true){
-				Toast.makeText(SubActivity.this, "저장 되었습니다, 이클립스와 연동중입니다.", Toast.LENGTH_LONG).show();
+				Toast.makeText(JoinProc.this, "저장 되었습니다, 이클립스와 연동중입니다.", Toast.LENGTH_LONG).show();
 				registerGcm();
 			}else{
-				Toast.makeText(SubActivity.this, "저장 실패", Toast.LENGTH_LONG).show();
+				Toast.makeText(JoinProc.this, "저장 실패", Toast.LENGTH_LONG).show();
 			}
 			
 			dialog.dismiss();

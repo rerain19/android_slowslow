@@ -36,13 +36,13 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 
-public class SigninActivity  extends AsyncTask<String,Void,String>{
+public class LoginProc  extends AsyncTask<String,Void,String>{
 
    private TextView statusField,roleField;
    private Context context;
    private int byGetOrPost = 0; 
    //flag 0 means get and 1 means post.(By default it is get.)
-   public SigninActivity(Context context,TextView statusField,   TextView roleField,int flag) {
+   public LoginProc(Context context,TextView statusField,   TextView roleField,int flag) {
       this.context = context;
       this.statusField = statusField;
       this.roleField = roleField;

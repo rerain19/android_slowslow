@@ -32,7 +32,7 @@
       </activity>
       
       <activity
-			android:name="com.rerain19.test.SubActivity"
+			android:name="com.rerain19.test.JoinProc"
 			android:label="@layout/subactivity"
       />
       <activity

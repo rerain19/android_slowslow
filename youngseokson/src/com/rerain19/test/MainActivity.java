@@ -44,7 +44,7 @@ public class MainActivity extends Activity {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				
-				Intent intentJoinActivity = new Intent(MainActivity.this, SubActivity.class);
+				Intent intentJoinActivity = new Intent(MainActivity.this, JoinProc.class);
 				startActivity(intentJoinActivity);
 			}
 		});
@@ -64,7 +64,7 @@ public class MainActivity extends Activity {
 		String password = passwordField.getText().toString();
 	
 		method.setText("get Method");
-		new SigninActivity(this, status, role, 0).execute(username, password);		
+		new LoginProc(this, status, role, 0).execute(username, password);		
 	}
 	
 	public void loginPost(View view){
@@ -72,7 +72,7 @@ public class MainActivity extends Activity {
 		String password = passwordField.getText().toString();
 		
 		method.setText("post Method");
-		new SigninActivity(this, status, role, 1).execute(username, password);
+		new LoginProc(this, status, role, 1).execute(username, password);
 	}
 	
 	@Override
