@@ -36,7 +36,7 @@
 			android:label="@layout/subactivity"
       />
       <activity
-			android:name="com.rerain19.test.loin_ok"
+			android:name="com.rerain19.test.login_ok"
 			android:label="@layout/login_ok"
       />
       <receiver

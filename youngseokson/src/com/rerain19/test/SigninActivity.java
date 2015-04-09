@@ -18,11 +18,13 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.protocol.HTTP;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.sax.StartElementListener;
 import android.util.Log;
 import android.view.Gravity;
 import android.widget.EditText;
@@ -120,11 +122,11 @@ public class SigninActivity  extends AsyncTask<String,Void,String>{
             StringBuilder sb = new StringBuilder();
             String line = null;
             // Read Server Response
-            while((line = reader.readLine()) != null)
-            {
+            while((line = reader.readLine()) != null){
                sb.append(line);
                break;
             }
+            
             return sb.toString();
          }catch(Exception e){
             return new String("Exception: " + e.getMessage());
@@ -141,7 +143,13 @@ public class SigninActivity  extends AsyncTask<String,Void,String>{
 	   
 		   this.statusField.setText("로그인성공");
 
-		   //this.roleField.setText(result);
+			Intent login_ok = new Intent(context, login_ok.class);
+			//startActivity(login_ok);
+			//finish();
+			context.startActivity(login_ok);
+			((Activity)context).finish();
+
+//		   context.startActivity(new Intent(context, login_ok.class));
 	   }else{
 		   
 		   Toast toast = Toast.makeText(context, "로그인실패", Toast.LENGTH_LONG);
@@ -149,57 +157,6 @@ public class SigninActivity  extends AsyncTask<String,Void,String>{
 		   toast.show();
 	   
 		   this.statusField.setText("아이디와 비밀번호를 확인해주십시요.");
-		   
-			
 		}
-	
-	   
-	   /*
-	   String Json =  DownloadHtml("http://rerain19.nanuminet.co.kr/index.php");
-	   Log.d("json:" , Json);
-	   
-	   try{
-		   String Result = "목록: \n";
-		   JSONArray ja = new JSONArray(Json);
-		   for(int j=0; j<ja.length(); j++){
-			   JSONObject order = ja.getJSONObject(j);
-			   Result += "이메일:" + order.getString("email") + "" +
-			   "비밀번호:" + order.getString("pwd") + "\n";
-		   }
-		   this.statusField.setText(Result);
-	   }catch(Exception e){
-		   
-	   }*/
    }
-   /*
-   String DownloadHtml(String addr){
-	   StringBuilder jsonHtml = new StringBuilder();
-	   try{
-		   URL url = new URL(addr);   
-		   HttpURLConnection conn = (HttpURLConnection)url.openConnection();
-		   
-		   if(conn!=null){
-			   conn.setConnectTimeout(10000);
-			   conn.setUseCaches(false);
-			   
-			   if(conn.getResponseCode() == HttpURLConnection.HTTP_OK){
-				BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream(), "UTF-8"));   
-				
-				for(;;){
-					String line = br.readLine();
-					if(line == null)	
-						break;
-					jsonHtml.append(line + "\n");
-				}
-				br.close();
-			   }
-			   conn.disconnect();
-		   }
-	   }catch(Exception ex){
-		   Log.d("tag", ex.getMessage());
-	   }
-	 
-	   return jsonHtml.toString();
-   }*/
-   
 }
