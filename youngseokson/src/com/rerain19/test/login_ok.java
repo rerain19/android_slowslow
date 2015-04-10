@@ -42,9 +42,9 @@ public class login_ok extends Activity{
 	
 	@SuppressLint("NewApi")
 	public void selectFlag(View view){
-		Toast toast = Toast.makeText(getApplicationContext(), view.toString(), Toast.LENGTH_LONG);
-		toast.setGravity(Gravity.CENTER, 0, 0);
-		toast.show();		
+//		Toast toast2 = Toast.makeText(getApplicationContext(), view.toString(), Toast.LENGTH_LONG);
+//		toast2.setGravity(Gravity.CENTER, 0, 0);
+//		toast2.show();		
 		Fragment fr = null;
 		
 //		switch(view.getId()){
@@ -56,9 +56,15 @@ public class login_ok extends Activity{
 //				break;
 //		}
 		if(view == findViewById(R.id.msg)){
+			Toast toast = Toast.makeText(getApplicationContext(), "msg", Toast.LENGTH_LONG);
+			toast.setGravity(Gravity.CENTER, 0, 0);
+			toast.show();
 			fr = new FragmentOne();
 		}
 		if(view == findViewById(R.id.searchList)){
+			Toast toast1 = Toast.makeText(getApplicationContext(), "searchList", Toast.LENGTH_LONG);
+			toast1.setGravity(Gravity.CENTER, 0, 0);
+			toast1.show();
 			fr = new FragmentTwo();
 		}		
 		
