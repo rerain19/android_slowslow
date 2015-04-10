@@ -1,71 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LinearLayout
      xmlns:android="http://schemas.android.com/apk/res/android"
-	    android:orientation="vertical"
-	    android:layout_width="wrap_content"
-	    android:layout_height="fill_parent"
-	>
-	<LinearLayout
-	    android:orientation="vertical"
-	    android:layout_width="wrap_content"
-	    android:layout_height="fill_parent"
-	>
-	    <TextView 
-	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content"
-	    android:text="hello01"
-	    />
-	<EditText android:text="EditText"
-	    android:id="@+id/EditText01"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"/>
-	 
-	<Button android:text="Button"
-	    android:id="@+id/Button01"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"/>
-	</LinearLayout>
+     android:orientation="vertical"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     >
+     <TableRow
+         android:layout_width="wrap_content"
+		 android:layout_height="wrap_content"
+     >
+	     <TextView
+	         android:id="@+id/welcomeUser"
+	         android:layout_weight="1"
+	         android:text="님  안녕하세요"
+	         android:layout_width="80dp"
+	         android:layout_height="50dp"
+	         >
+	     </TextView>
+	</TableRow>
+	<TableRow
+         android:layout_width="wrap_content"
+		 android:layout_height="wrap_content"
+ 	>
+	    <Button
+	        android:id="@+id/msg"
+	        android:layout_width="80dp"
+	        android:layout_height="40dp"
+	        android:textSize="15dp"
+	        android:text="푸쉬전송"
+	        android:onClick="selectFlag"
+	        />
+			        
+        <Button
+	        android:id="@+id/searchList"
+	        android:layout_width="80dp"
+	        android:layout_height="40dp"
+	        android:textSize="15dp"
+	        android:text="Search"
+	        android:onClick="selectFlag"
+	        />
+        <Button
+        android:id="@+id/map"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:textSize="15dp"
+        android:text="Maps"
+        android:onClick="selectFlag"
+      		/>
+
+		<Button
+	        android:id="@+id/searchImg"
+	        android:layout_width="80dp"
+	        android:layout_height="40dp"
+	        android:textSize="15dp"
+	        android:text="사진"
+	        android:onClick="selectFlag"
+	        >      		
+    	</Button>
+		<fragment 
+	    android:id="@+id/fragment_place"
+	    android:name="com.rerain19.test.FragmentOne"
+	    android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		
+	    />    	
+	</TableRow>	
 	
-	<LinearLayout
-	    
-	    android:orientation="vertical"
-	    android:layout_width="wrap_content"
-	    android:layout_height="fill_parent"
-	>
-	    <TextView 
-	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content"
-	    android:text="hello"
-	    />
-	<EditText android:text="EditText"
-	    android:id="@+id/EditText02"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"/>
-	 
-	<Button android:text="Button"
-	    android:id="@+id/Button02"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"/>
-	</LinearLayout>
-	<LinearLayout
-	    
-	    android:orientation="vertical"
-	    android:layout_width="wrap_content"
-	    android:layout_height="fill_parent"
-	>
-	    <TextView 
-	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content"
-	    android:text="hello"
-	    />
-	<EditText android:text="EditText"
-	    android:id="@+id/EditText03"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"/>
-	 
-	<Button android:text="Button"
-	    android:id="@+id/Button03"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"/>
-	</LinearLayout>
 </LinearLayout>
