@@ -38,7 +38,11 @@
       <activity
 			android:name="com.rerain19.test.login_ok"
 			android:label="@layout/login_ok"
-      />
+		/>
+      <activity
+			android:name="com.rerain19.test.NMap"
+			
+		/>            
       <receiver
           android:name="com.google.android.gcm.GCMBroadcastReceiver"
           android:permission="com.google.android.c2dm.permission.SEND" >
