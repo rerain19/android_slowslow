@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="Two"
-        android:background="#ffff00"
+        android:background="#00ffff"
         >
         
     </TextView>
