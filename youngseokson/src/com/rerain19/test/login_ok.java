@@ -5,74 +5,31 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.app.TabActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.TextureView;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class login_ok extends Activity{
-
-	private TextView welcomeUser;
-	
-	
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
-		super.onCreate(savedInstanceState);
-		
-		setContentView(R.layout.login_ok);
-		
-		welcomeUser = (TextView)findViewById(R.id.welcomeUser);
-		
-		welcomeUser.setText("님 안녕하세요");
-		
-//		Toast toast = Toast.makeText(getApplicationContext(), "이동완료", Toast.LENGTH_LONG);
-//		toast.setGravity(Gravity.CENTER, 0, 0);
-//		toast.show();
-		
-//		Button fragmentOne = (Button)findViewById(R.id.msg);
-//		Button fragmentTwo = (Button)findViewById(R.id.searchList);
-//		
-//		fragmentOne.setOnClickListener((OnClickListener) this);
-	}
-	
-	@SuppressLint("NewApi")
-	public void selectFlag(View view){
-//		Toast toast2 = Toast.makeText(getApplicationContext(), view.toString(), Toast.LENGTH_LONG);
-//		toast2.setGravity(Gravity.CENTER, 0, 0);
-//		toast2.show();		
-		Fragment fr = null;
-		
-//		switch(view.getId()){
-//			case R.id.msg :
-//				fr = new FragmentOne();
-//				break;
-//			case R.id.searchList:
-//				fr = new FragmentTwo();
-//				break;
-//		}
-		if(view == findViewById(R.id.msg)){
-			Toast toast = Toast.makeText(getApplicationContext(), "msg", Toast.LENGTH_LONG);
-			toast.setGravity(Gravity.CENTER, 0, 0);
-			toast.show();
-			fr = new FragmentOne();
-		}
-		if(view == findViewById(R.id.searchList)){
-			Toast toast1 = Toast.makeText(getApplicationContext(), "searchList", Toast.LENGTH_LONG);
-			toast1.setGravity(Gravity.CENTER, 0, 0);
-			toast1.show();
-			fr = new FragmentTwo();
-		}		
-		
-		FragmentManager fm = getFragmentManager();
-		FragmentTransaction fragmentTransaction = fm.beginTransaction();
-		fragmentTransaction.replace(R.id.fragment_place, fr);
-		fragmentTransaction.commit();
-	}
-
-	
+public class login_ok extends TabActivity {
+    private TabHost mTabHost;
+     
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.login_ok);
+         
+        mTabHost = getTabHost();
+         
+        // 탭 1, 2, 3 을 추가하면서 태그를 달아주고, 제목(또는 아이콘)을 설정한다.
+        mTabHost.addTab(mTabHost.newTabSpec("tab1").setContent(R.id.tabs1).setIndicator("Tab1"));
+        mTabHost.addTab(mTabHost.newTabSpec("tab2").setContent(R.id.tabs2).setIndicator("Tab2"));
+        mTabHost.addTab(mTabHost.newTabSpec("tab3").setContent(R.id.tabs3).setIndicator("Tab3"));
+        mTabHost.addTab(mTabHost.newTabSpec("tab4").setContent(R.id.tabs4).setIndicator("Tab4"));        
+    }
 }
