@@ -143,8 +143,8 @@ public class LoginProc  extends AsyncTask<String,Void,String>{
 	   
 		   this.statusField.setText("로그인성공");
 
-			Intent login_ok = new Intent(context, login_ok.class);
-			context.startActivity(login_ok);
+			Intent NMap = new Intent(context, NMap.class);
+			context.startActivity(NMap);
 			((Activity)context).finish();
 	   }else{
 		   

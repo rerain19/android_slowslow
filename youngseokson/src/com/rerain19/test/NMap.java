@@ -41,7 +41,7 @@ public class NMap extends NMapActivity {
              mMapView = new NMapView(this);
  
              // 키 인증
-             mMapView.setApiKey("10d1bb03126f49b10b099c1f5e854d82");
+             mMapView.setApiKey("8e05e51e809b47e49846cacc17f9e493");
  
              // 기능 부여
              setContentView(mMapView);
