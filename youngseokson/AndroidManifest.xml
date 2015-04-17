@@ -50,9 +50,9 @@
 			android:name="com.rerain19.test.login_ok"
 			android:label="@layout/login_ok"
 		/>
-      <activity
+	<activity
 			android:name="com.rerain19.test.NMap"
-			
+			android:label="@layout/nmap"
 		/>
       <meta-data
 

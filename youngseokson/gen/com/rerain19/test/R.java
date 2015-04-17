@@ -1798,7 +1798,7 @@ containing a value of this type.
         public static final int fragment_one=0x7f030017;
         public static final int fragment_two=0x7f030018;
         public static final int login_ok=0x7f030019;
-        public static final int nmmap=0x7f03001a;
+        public static final int nmap=0x7f03001a;
         public static final int subactivity=0x7f03001b;
         public static final int support_simple_spinner_dropdown_item=0x7f03001c;
     }
