@@ -13,24 +13,15 @@ import com.nhn.android.maps.maplib.NGeoPoint;
 import com.nhn.android.maps.nmapmodel.NMapError;
  
 public class NMap extends NMapActivity {
- 
-       /*
-        * 지도 뷰 객체
-        */
+       /*지도 뷰 객체*/
        NMapView mMapView;
        
-       /*
-        * 지도 이동에 따라 사용할 변수
-        */
+       /* 지도 이동에 따라 사용할 변수  */
        OnMapStateChangeListener onMapViewStateChangeListener;
        OnMapViewTouchEventListener onMapViewTouchEventListener;
        
-       /*
-        * 지도 줌/인 기능 등 여러 기본기능 
-        */
+       /*지도 줌/인 기능 등 여러 기본기능*/
        NMapController mMapController;
-       
- 
        
        @Override    
        protected void onCreate(Bundle savedInstanceState) {
@@ -59,29 +50,20 @@ public class NMap extends NMapActivity {
              
        }
        
-       /*
-        * 지도 실행시 시작위치 좌표 지정 메소드
-        */
+       /* 지도 실행시 시작위치 좌표 지정 메소드*/
        public void onMapInitHandler(NMapView mapView, NMapError errorInfo) {
-             
         if (errorInfo == null) { // success
-              
                 mMapController.setMapCenter(new NGeoPoint(127.108099, 37.366034), 11);
-                 
-        } 
-        else 
-        { // fail
-                     Log.e("error", "onMapInitHandler: error=" + errorInfo.toString());
+        }else{ // fail
+        		Log.e("error", "onMapInitHandler: error=" + errorInfo.toString());
         }
-        
        }  
-       
- 
+      
        @Override
        public boolean onCreateOptionsMenu(Menu menu) {
              // Inflate the menu; this adds items to the action bar if it is present.
              getMenuInflater().inflate(R.menu.main, menu);
              return true;
        }
- 
+
 }

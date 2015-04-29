@@ -17,21 +17,21 @@
             <TextView android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/tabs1"
-                android:hint="푸시메세지" />
+                android:hint="" />
             <!-- Tab 2 -->
             <TextView android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/tabs2"
-                android:text="리스트검색"/>
+                android:text=""/>
             <!-- Tab 3 -->
             <TextView android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/tabs3"
-                android:text="네이버지도"/>
+                android:text=""/>
 			<TextView android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/tabs4"
-                android:text="갤러리"/>            
+                android:text=""/>            
         </FrameLayout>    
     </LinearLayout>
 </TabHost>

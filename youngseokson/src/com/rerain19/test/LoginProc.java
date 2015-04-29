@@ -68,7 +68,7 @@ public class LoginProc  extends AsyncTask<String,Void,String>{
             String link = "http://myphpmysqlweb.hostei.com/login.php?username="
             +username+"&password="+password;
             */
-            String link = "http://rerain19.nanuminet.co.kr/index.php?email="
+            String link = "http://rerain19.nanuminet.co.kr/android_login.php?email="
                     +email+"&pwd="+pwd;
             
             //URL 객체를 생성후에 url 주소값을 담는다.
@@ -105,7 +105,7 @@ public class LoginProc  extends AsyncTask<String,Void,String>{
          try{
             String username = (String)arg0[0];
             String password = (String)arg0[1];
-            String link="http://myphpmysqlweb.hostei.com/loginpost.php";
+            String link="http://myphpmysqlweb.hostei.com/android_login.php";
             String data  = URLEncoder.encode("username", "UTF-8") 
             + "=" + URLEncoder.encode(username, "UTF-8");
             data += "&" + URLEncoder.encode("password", "UTF-8") 
