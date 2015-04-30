@@ -50,7 +50,7 @@
 		/>
 	<activity
 			android:name="com.rerain19.test.listview"
-			android:label="@layout/nmap"
+			android:label="@layout/listview"
 		/>
       <meta-data
 

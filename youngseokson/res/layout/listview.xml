@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<LinearLayout
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	android:orientation="vertical"
-	android:layout_width="fill_parent"
-	android:layout_height="fill_parent">
-	<ListView 
-     android:id="@android:id/list"  
-     android:layout_width="match_parent"
-  	android:layout_height="wrap_content"
-   >
-	</ListView> 
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">  
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/state_name"
+            android:hint="Enter State Name"  
+			/>
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/submit_btn"
+            android:text="Submit"
+                />
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/response"
+                />
+    <Listview
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/list"
+                />    
 </LinearLayout>	
