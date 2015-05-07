@@ -49,8 +49,8 @@
 			android:label="@layout/nmap"
 		/>
 	<activity
-			android:name="com.rerain19.test.listview"
-			android:label="@layout/listview"
+			android:name="com.rerain19.test.listviewProc"
+			android:label="@layout/listviewproc"
 		/>
       <meta-data
 

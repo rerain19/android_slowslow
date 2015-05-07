@@ -27,7 +27,7 @@ public class login_ok extends  TabActivity {
         //setIndicator->탭에 설정할 제목
         mTabHost.addTab(mTabHost.newTabSpec("tab1").setContent(R.id.tabs1).setIndicator("메세지발송"));
         //mTabHost.addTab(mTabHost.newTabSpec("tab2").setContent(R.id.tabs2).setIndicator("검색"));
-        mTabHost.addTab(mTabHost.newTabSpec("tab2").setContent(new Intent(login_ok.this, listview.class)).setIndicator("검색"));
+        mTabHost.addTab(mTabHost.newTabSpec("tab2").setContent(new Intent(login_ok.this, listviewProc.class)).setIndicator("검색"));
         
         mTabHost.addTab(mTabHost.newTabSpec("tab3").setContent(new Intent(login_ok.this, NMap.class)).setIndicator("지도"));
         //mTabHost.addTab(mTabHost.newTabSpec("tab3").setContent(R.id.tabs3).setIndicator("지도"));
