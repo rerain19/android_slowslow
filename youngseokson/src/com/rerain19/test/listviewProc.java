@@ -14,7 +14,6 @@ public class listviewProc extends ListActivity {
 		    super.onCreate(savedInstanceState);
 		    setContentView(R.layout.listviewproc);
 		    
-		    
 		    content = (TextView)findViewById(R.id.output);
 		    String[] values = new String[] { "Android", "iPhone", "WindowsMobile",
 		        "Blackberry", "WebOS", "Ubuntu", "Windows7", "Max OS X",
